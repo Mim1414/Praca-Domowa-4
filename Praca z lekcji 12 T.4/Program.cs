@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Praca_z_lekcji_12_T._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                while (true)
+                {
+                    Console.WriteLine("Podaj Liczbe a czasem otrzymasz niespodziewaną odpowiedz:");
+                    var game = new FizzBuzz(int.Parse(Console.ReadLine()));
+
+                    Console.WriteLine("Jesli chcesz grac dalej wpisz 1");
+                    var answer = int.Parse(Console.ReadLine());
+                    if (answer != 1)
+                    {
+                        break;
+                    }
+                    Console.Clear();
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Proszę podawać tylko liczby");
+            }
+            finally
+            {
+                Console.WriteLine("Dziekuję za udział w grze");
+            }
+        }
+    }
+}
