@@ -8,38 +8,26 @@ namespace Praca_z_lekcji_12_T._4
 {
     class FizzBuzz
     {
-        public FizzBuzz(int data)
+        public string Fizz(int game)
         {
-            try
-            {
-                //Console.WriteLine("Podaj Liczbe a czasem otrzymasz niespodziewaną odpowiedz:");
-                //var data = int.Parse(Console.ReadLine());
-                if (data % 15 == 0)
-                {
-                    Console.WriteLine("Fizz Buzz");
-                }
-                else if (data % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (data % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine($"Wpisales liczbe {data}");
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Proszę podawać tylko liczby");
-            }
-            finally
-            {
 
-            }
 
+            if (game % 15 == 0)
+            {
+                return "FizzBuzz";
+            }
+            else if (game % 3 == 0)
+            {
+                return "Fizz";
+            }
+            else if (game % 5 == 0)
+            {
+                return "Buzz";
+            }
+            else
+            {
+                return game.ToString();
+            }
         }
     }
 }
